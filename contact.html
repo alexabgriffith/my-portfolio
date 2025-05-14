@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/tab-logo.svg" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexa Griffith Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&family=Sofia+Sans+Semi+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+  <div class="nav-wrapper">
+    <nav>
+      <a href="index.html">
+         <img class="logo-img" src="images/logo.svg" alt="Logo" />
+      </a>
+      <div class="hamburger-menu-wrapper">
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+          <div class="line1"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+    <div class="menu-screen" id="menuScreen">
+    <ul>
+      <li><a href="index.html">WORK</a></li>
+      <li><a href="About.html">ABOUT</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="resume.html">RESUME</a></li>
+      <li><a href="https://www.linkedin.com/in/alexa-griffith-a67581311/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+      <li><a href="https://www.behance.net/alexagriffith2" target="_blank" rel="noopener noreferrer">BEHANCE</a></li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menuIcon").classList.toggle("open");
+      document.getElementById("menuScreen").classList.toggle("show");
+    }
+  </script>
+
+  <div class="main-contact">
+
+    <h1>CONTACT</h1>
+
+    <div class="contact-button-group">
+      <ul class="contact-button-ul">
+        <li><a href="mailto:alexagriffith.design@gmail.com">EMAIL</a></li>
+
+        <li><a href="https://www.linkedin.com/in/alexa-griffith-a67581311/" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+  
+        <li><a href="https://www.behance.net/alexagriffith2" target="_blank" rel="noopener noreferrer">BEHANCE</a></li>
+      </ul>
+    </div>
+
+
+
+    <div class="contact-form" action="https://formsubmit.co/alexa2004brooke@example.com" method="POST">
+
+      <div class="form-header">Let's Connect!</div>
+      <p class="form-p">I'm currently open to job opportunities, freelance work, or collaborations. Feel free to reach out via the form below or directly through email.</p>
+
+      <form class="form-grid">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Last Name">
+      
+        <input type="email" placeholder="Email">
+        <input type="tel" placeholder="Phone">
+
+        <div class="custom-dropdown">
+          <div class="dropdown-header">
+            <span class="selected">Inquiry Type</span>
+            <img src="images/arrows.svg" class="arrow-icon">
+          </div>
+          <ul class="dropdown-list">
+            <li>Freelance Project</li>
+            <li>Internship Opportunity</li>
+            <li>Full-Time Position</li>
+            <li>Collaboration Request</li>
+            <li>Design Feedback / Review</li>
+            <li>General Inquiry</li>
+          </ul>
+          
+        </div>
+
+        <script>
+          const dropdown = document.querySelector('.custom-dropdown');
+          const header = dropdown.querySelector('.dropdown-header');
+          const selected = dropdown.querySelector('.selected');
+          const items = dropdown.querySelectorAll('.dropdown-list li');
+        
+          // Toggle dropdown when clicking the header
+          header.addEventListener('click', () => {
+            dropdown.classList.toggle('open');
+          });
+        
+          // Handle option clicks
+          items.forEach(item => {
+            item.addEventListener('click', (e) => {
+              selected.textContent = e.target.textContent;
+              dropdown.classList.remove('open'); // ⬅️ collapses dropdown
+            });
+          });
+        
+          // Optional: click outside to close
+          document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+              dropdown.classList.remove('open');
+            }
+          });
+
+            items.forEach(item => {
+              item.addEventListener('click', (e) => {
+            selected.textContent = e.target.textContent;
+            dropdown.classList.remove('open');
+              dropdown.classList.add('active'); // ← makes text pink
+            });   
+          });
+
+        </script>
+        
+        
+
+        
+        
+        
+      
+        <textarea placeholder="Purpose of your message"></textarea>
+      </form>
+
+      <button type="submit" class="submit-button">Submit</button>
+      
+      
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  
+  
+
+  <footer>
+
+    <h2 class="footer-h2">Excited to work together - Let’s connect!</h2>
+
+    <div class="footer-links">
+        <a href="mailto:alexagriffith.design@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/alexa-griffith-a67581311/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.behance.net/alexagriffith2" target="_blank" rel="noopener noreferrer">Behance</a>
+    </div>
+
+    <div class="copyright-text">©2025 Alexa Griffith</div>
+
+  </footer>
+
+  
+
+
+
+
+</body>
+</html>
